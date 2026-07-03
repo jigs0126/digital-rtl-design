@@ -29,12 +29,9 @@ A basic combinational circuit that adds two single-bit binary numbers.
 - Xilinx Vivado 2025.1
 - Target device: xc7s50csga324-1
 
-## How to Reproduce
+## Contents
 
-1. Open Vivado and create a new RTL project.
-2. Add `src/HA.v` as a design source.
-3. Add `constraints/HA.xdc` as a constraints file.
-4. Run Synthesis → Implementation → Generate Bitstream.
-5. Export the utilization, timing, and power reports into the `reports/` folder.
-
-See `CONCLUSION.md` for a summary of the results.
+1. [Source (`src/HA.v`)](src/HA.v)
+2. [Constraints (`constraints/HA.xdc`)](constraints/HA.xdc)
+3. [Reports (`reports/`)](reports)
+4. [Conclusion](CONCLUSION.md)
