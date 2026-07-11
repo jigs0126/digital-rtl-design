@@ -1,0 +1,10 @@
+set_property PACKAGE_PIN L1 [get_ports Q]
+set_property PACKAGE_PIN P1 [get_ports Qbar]
+set_property PACKAGE_PIN R2 [get_ports S]
+set_property PACKAGE_PIN T1 [get_ports R]
+set_property IOSTANDARD LVCMOS33 [get_ports Q]
+set_property IOSTANDARD LVCMOS33 [get_ports Qbar]
+set_property IOSTANDARD LVCMOS33 [get_ports R]
+set_property IOSTANDARD LVCMOS33 [get_ports S]
+
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets Q_OBUF]
