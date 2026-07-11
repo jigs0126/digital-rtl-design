@@ -1,16 +1,24 @@
 # Conclusion — SIPO Shift Register
 
-**Status: synthesis + implementation complete; behavioral sim waveform pending.**
+**Status: synthesis, implementation, and behavioral simulation all complete.**
 
 ## Functional Summary
 
 - [x] Functional correctness verified with `tb_SIPO_fast.v` (fast
       divider override) — `llrl_out` correctly reaches `1011` after
       shifting in bits `1,0,1,1`.
-- [ ] Vivado behavioral simulation waveform attached in `simulation/waveform.png`
-      (recommend capturing this with `tb_SIPO_fast.v`, not `tb_SIPO.v` —
-      see README note on the clock divider making `tb_SIPO.v` impractical
-      to observe directly in a short sim run)
+- [x] Vivado behavioral simulation waveform attached in `simulation/waveform.png`
+
+**Waveform observations (`tb_SIPO_behav.wcfg`, 0–100ns window):**
+`llrl_out` progresses `x → 0 → 1 → 2 → 5 → b → 7 → f` (hex) as
+`serial_in` toggles and each divided clock edge shifts a new bit in —
+in binary: `0000 → 0001 → 0010 → 0101 → 1011 → 0111 → 1111`. This
+confirms:
+- The initial `X` clears cleanly to a known `0000` right after reset
+  releases (the uninitialized-counter fix is working).
+- Each subsequent value is a valid left-shift of the previous one with
+  a new bit entering at the LSB — no glitches or stuck bits across the
+  whole trace.
 
 ## Resource Utilization
 
@@ -68,3 +76,4 @@ supplied to `report_power`, this number will be far more trustworthy.
 - Missing `create_clock` constraint is worth calling out proactively:
   an unconstrained design can "pass" implementation with no idea
   whether it actually meets its target frequency.
+
