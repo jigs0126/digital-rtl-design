@@ -1,0 +1,59 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xF13066C4F13066C4",
+      "device": "xc7a35ticpg236-1L",
+      "gen_directory": "../../../../priority_encoder_ip.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.1"
+    },
+    "design_tree": {
+      "Priority_Encoder_0": ""
+    },
+    "ports": {
+      "din_0": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "y1_0": {
+        "direction": "O"
+      },
+      "y0_0": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "Priority_Encoder_0": {
+        "vlnv": "xilinx.com:user:Priority_Encoder:1.0",
+        "ip_revision": "2",
+        "xci_name": "design_1_Priority_Encoder_0_0",
+        "xci_path": "ip\\design_1_Priority_Encoder_0_0\\design_1_Priority_Encoder_0_0.xci",
+        "inst_hier_path": "Priority_Encoder_0",
+        "has_run_ip_tcl": "true"
+      }
+    },
+    "nets": {
+      "Priority_Encoder_0_y0": {
+        "ports": [
+          "Priority_Encoder_0/y0",
+          "y0_0"
+        ]
+      },
+      "Priority_Encoder_0_y1": {
+        "ports": [
+          "Priority_Encoder_0/y1",
+          "y1_0"
+        ]
+      },
+      "din_0_1": {
+        "ports": [
+          "din_0",
+          "Priority_Encoder_0/din"
+        ]
+      }
+    }
+  }
+}

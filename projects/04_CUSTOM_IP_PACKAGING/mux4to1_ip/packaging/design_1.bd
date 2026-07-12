@@ -1,0 +1,86 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xA47E4123A47E4123",
+      "device": "xc7a35ticpg236-1L",
+      "gen_directory": "../../../../mux4to1_blockip.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.1"
+    },
+    "design_tree": {
+      "mux_4to1_0": ""
+    },
+    "ports": {
+      "in0_0": {
+        "direction": "I"
+      },
+      "in1_0": {
+        "direction": "I"
+      },
+      "in2_0": {
+        "direction": "I"
+      },
+      "in3_0": {
+        "direction": "I"
+      },
+      "mux_out_0": {
+        "direction": "O"
+      },
+      "sel_0": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
+      }
+    },
+    "components": {
+      "mux_4to1_0": {
+        "vlnv": "xilinx.com:user:mux_4to1:1.0",
+        "ip_revision": "3",
+        "xci_name": "design_1_mux_4to1_0_0",
+        "xci_path": "ip\\design_1_mux_4to1_0_0\\design_1_mux_4to1_0_0.xci",
+        "inst_hier_path": "mux_4to1_0",
+        "has_run_ip_tcl": "true"
+      }
+    },
+    "nets": {
+      "in0_0_1": {
+        "ports": [
+          "in0_0",
+          "mux_4to1_0/in0"
+        ]
+      },
+      "in1_0_1": {
+        "ports": [
+          "in1_0",
+          "mux_4to1_0/in1"
+        ]
+      },
+      "in2_0_1": {
+        "ports": [
+          "in2_0",
+          "mux_4to1_0/in2"
+        ]
+      },
+      "in3_0_1": {
+        "ports": [
+          "in3_0",
+          "mux_4to1_0/in3"
+        ]
+      },
+      "mux_4to1_0_mux_out": {
+        "ports": [
+          "mux_4to1_0/mux_out",
+          "mux_out_0"
+        ]
+      },
+      "sel_0_1": {
+        "ports": [
+          "sel_0",
+          "mux_4to1_0/sel"
+        ]
+      }
+    }
+  }
+}
